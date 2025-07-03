@@ -66,6 +66,12 @@ bigstringaf_blit_from_bytes(value vsrc, value vsrc_off, value vdst, value vdst_o
 }
 
 CAMLprim value
+bigstringaf_blit_from_string(value vsrc, value vsrc_off, value vdst, value vdst_off, value vlen)
+{
+  return bigstringaf_blit_from_bytes(vsrc, vsrc_off, vdst, vdst_off, vlen);
+}
+
+CAMLprim value
 bigstringaf_memcmp_bigstring(value vba1, value vba1_off, value vba2, value vba2_off, value vlen)
 {
     void *ba1 = ((char *)Caml_ba_data_val(vba1)) + Unsigned_long_val(vba1_off),

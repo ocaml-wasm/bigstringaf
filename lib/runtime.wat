@@ -7,6 +7,10 @@
       (func $bigstringaf_blit_from_bytes
          (param (ref eq)) (param (ref eq)) (param (ref eq)) (param (ref eq))
          (param (ref eq)) (result (ref eq))))
+   (import "env" "caml_bigstring_blit_string_to_ba"
+      (func $bigstringaf_blit_from_string
+         (param (ref eq)) (param (ref eq)) (param (ref eq)) (param (ref eq))
+         (param (ref eq)) (result (ref eq))))
    (import "env" "caml_bigstring_blit_ba_to_bytes"
       (func $bigstringaf_blit_to_bytes
          (param (ref eq)) (param (ref eq)) (param (ref eq)) (param (ref eq))
@@ -27,6 +31,7 @@
    (export "bigstringaf_blit_to_bytes" (func $bigstringaf_blit_to_bytes))
    (export "bigstringaf_blit_to_bigstring" (func $bigstringaf_blit_to_bigstring))
    (export "bigstringaf_blit_from_bytes" (func $bigstringaf_blit_from_bytes))
+   (export "bigstringaf_blit_from_string" (func $bigstringaf_blit_from_string))
    (export "bigstringaf_memcmp_bigstring" (func $bigstringaf_memcmp_bigstring))
    (export "bigstringaf_memcmp_string" (func $bigstringaf_memcmp_string))
 
